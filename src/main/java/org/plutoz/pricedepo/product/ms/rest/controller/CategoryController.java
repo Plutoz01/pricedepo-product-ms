@@ -1,5 +1,6 @@
 package org.plutoz.pricedepo.product.ms.rest.controller;
 
+import org.plutoz.pricedepo.common.rest.exception.ResourceNotFoundException;
 import org.plutoz.pricedepo.product.ms.domain.Category;
 import org.plutoz.pricedepo.product.ms.service.CategoryService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -30,6 +31,17 @@ public class CategoryController {
 	@GetMapping
 	public Iterable<Category> getAll(Pageable pageable){
 		return categoryService.findAll(pageable);
+	}
+	
+	@GetMapping("/{id}")
+	public Category findById(@PathVariable("id") Long id){
+		Category result = categoryService.findOne(id);
+		
+		if(result == null){
+			throw new ResourceNotFoundException();
+		}
+		
+		return result;
 	}
 	
 	@GetMapping("/search/name/{name}")
