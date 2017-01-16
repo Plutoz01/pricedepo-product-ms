@@ -5,7 +5,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
 
 @Configuration
-@Import(DefaultRestExceptionHandler.class)
-public class RestConfiguration {
-
+//@Import(DefaultRestExceptionHandler.class)
+public class RestConfiguration  {
+	
 }
