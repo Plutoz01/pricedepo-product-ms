@@ -11,7 +11,7 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 @Service
-public class ProductServiceImpl extends AbstractCrudService<Product, Long> implements ProductService {
+public class ProductServiceImpl extends AbstractCrudService<Long, Product> implements ProductService {
 
 	private ProductRepository productRepository;
 	

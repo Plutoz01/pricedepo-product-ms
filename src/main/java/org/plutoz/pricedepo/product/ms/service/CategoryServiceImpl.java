@@ -11,7 +11,7 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 @Service
-public class CategoryServiceImpl extends AbstractCrudService<Category, Long> implements CategoryService {
+public class CategoryServiceImpl extends AbstractCrudService<Long, Category> implements CategoryService {
 
 	private CategoryRepository categoryRepository;
 	

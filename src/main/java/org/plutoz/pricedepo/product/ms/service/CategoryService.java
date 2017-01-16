@@ -5,7 +5,7 @@ import org.plutoz.pricedepo.product.ms.domain.Category;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 
-public interface CategoryService extends CrudService<Category, Long> {
+public interface CategoryService extends CrudService<Long, Category> {
 	
 	public Page<Category> findByNameContainingIgnoreCase(String name, Pageable pageable);
 }

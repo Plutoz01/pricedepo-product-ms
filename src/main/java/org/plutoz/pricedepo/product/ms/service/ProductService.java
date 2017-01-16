@@ -5,7 +5,7 @@ import org.plutoz.pricedepo.product.ms.domain.Product;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 
-public interface ProductService extends CrudService<Product, Long> {
+public interface ProductService extends CrudService<Long, Product> {
 	
 	public Page<Product> findByManufacturer(String manufacturer, Pageable pageable);
 	
