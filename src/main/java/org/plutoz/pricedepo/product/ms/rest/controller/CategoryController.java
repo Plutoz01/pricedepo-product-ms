@@ -6,7 +6,6 @@ import org.plutoz.pricedepo.product.ms.service.CategoryService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -62,11 +61,11 @@ public class CategoryController {
 	@PutMapping("/{id}")
 	public ResponseEntity<Category> update(@PathVariable Long id, @RequestBody Category category){
 		if(!categoryService.exists(id)){
-			return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+			return ResponseEntity.notFound().build();
 		}
 		
 		category.setId(id);
 		Category updated = categoryService.save(category);
-		return new ResponseEntity<Category>(updated, HttpStatus.OK);
+		return ResponseEntity.ok(updated);
 	}	
 }
