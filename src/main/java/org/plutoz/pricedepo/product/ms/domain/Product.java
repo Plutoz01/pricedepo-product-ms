@@ -12,6 +12,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
+import javax.persistence.ManyToOne;
 
 import org.plutoz.pricedepo.common.domain.Identifiable;
 
@@ -26,14 +27,15 @@ import lombok.NoArgsConstructor;
 public class Product implements Identifiable<Long> {
 
 	@Id
-	@GeneratedValue
+	@GeneratedValue()
 	private Long id;
 	
-	@Column(nullable = false)
-	private String manufacturer;
+	@ManyToOne
+	private Brand brand;
 	
-	@Column(nullable = false)
-	private String brand;
+	@ManyToOne
+	private Company manufacturer;
+
 	
 	@Column(nullable = false)
 	private String fullName;
