@@ -1,6 +1,7 @@
 package org.plutoz.pricedepo.product.ms.rest.controller;
 
 import org.plutoz.pricedepo.product.ms.domain.Category;
+import org.plutoz.pricedepo.product.ms.rest.dto.CategoryDTO;
 import org.plutoz.pricedepo.product.ms.service.CategoryService;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -11,7 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/categories")
-public class CategoryController extends AbstractRestController<Long, Category> {
+public class CategoryController extends AbstractRestController<Long, Category, CategoryDTO> {
 
 	private final CategoryService categoryService;
 
