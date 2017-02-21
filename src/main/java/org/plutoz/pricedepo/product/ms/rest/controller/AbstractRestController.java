@@ -5,6 +5,7 @@ import java.io.Serializable;
 import org.plutoz.pricedepo.common.domain.Identifiable;
 import org.plutoz.pricedepo.common.rest.exception.ResourceNotFoundException;
 import org.plutoz.pricedepo.common.service.CrudService;
+import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -23,7 +24,7 @@ public abstract class AbstractRestController<ID extends Serializable, T extends 
 	}
 	
 	@GetMapping
-	public Iterable<T> getAll(Pageable pageable){
+	public Page<T> getAll(Pageable pageable){
 		return crudService.findAll(pageable);
 	}	
 	
