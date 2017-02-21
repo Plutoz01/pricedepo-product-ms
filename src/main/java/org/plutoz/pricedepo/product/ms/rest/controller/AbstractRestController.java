@@ -5,7 +5,6 @@ import java.io.Serializable;
 import org.plutoz.pricedepo.common.domain.Identifiable;
 import org.plutoz.pricedepo.common.rest.exception.ResourceNotFoundException;
 import org.plutoz.pricedepo.common.service.CrudService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Pageable;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -17,9 +16,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 
 public abstract class AbstractRestController<ID extends Serializable, T extends Identifiable<ID>> {
 	
-	private final CrudService<ID, T> crudService;
+	private final CrudService<ID, T> crudService;	
 	
-	@Autowired
 	public AbstractRestController(CrudService<ID, T> crudService){
 		this.crudService = crudService;
 	}
