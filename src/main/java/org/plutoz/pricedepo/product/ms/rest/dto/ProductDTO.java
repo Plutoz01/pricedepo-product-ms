@@ -1,6 +1,8 @@
 package org.plutoz.pricedepo.product.ms.rest.dto;
 
 import java.math.BigDecimal;
+import java.util.HashSet;
+import java.util.Set;
 
 import org.plutoz.pricedepo.common.domain.Identifiable;
 
@@ -14,4 +16,5 @@ public class ProductDTO implements Identifiable<Long> {
 	private String fullName;
 	private BigDecimal unit;
 	private String measurement;
+	private Set<String> categories = new HashSet<>();
 }

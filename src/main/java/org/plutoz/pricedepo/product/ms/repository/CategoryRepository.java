@@ -10,4 +10,6 @@ import org.springframework.stereotype.Repository;
 public interface CategoryRepository extends PagingAndSortingRepository<Category, Long> {
 	
 	public Page<Category> findByNameContainingIgnoreCase(String name, Pageable pageable);
+	
+	public Category findByNameIgnoreCase(String name);
 }
