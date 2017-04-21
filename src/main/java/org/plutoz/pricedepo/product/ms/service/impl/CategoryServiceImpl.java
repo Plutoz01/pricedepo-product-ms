@@ -28,4 +28,11 @@ public class CategoryServiceImpl extends AbstractCrudService<Long, Category> imp
 		
 		return categoryRepository.findByNameContainingIgnoreCase(name, pageable);
 	}
+
+	@Override
+	public Category findByNameIgnoreCase(String name) {
+		requireNonNull(name, "Category name can not be null");
+		
+		return categoryRepository.findByNameIgnoreCase(name);
+	}
 }

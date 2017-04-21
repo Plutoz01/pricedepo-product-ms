@@ -28,7 +28,7 @@
 		<dependency>
 			<groupId>org.plutoz.pricedepo</groupId>
 			<artifactId>common-lib</artifactId>
-			<version>[0.0.1-SNAPSHOT,]</version>
+			<version>[0.0.2-SNAPSHOT,]</version>
 		</dependency>
 
 		<dependency>
@@ -49,11 +49,11 @@
 			<artifactId>springfox-swagger2</artifactId>
 			<version>2.6.1</version>
 		</dependency>
-		
+
 		<dependency>
-		    <groupId>io.springfox</groupId>
-		    <artifactId>springfox-swagger-ui</artifactId>
-		    <version>2.6.1</version>
+			<groupId>io.springfox</groupId>
+			<artifactId>springfox-swagger-ui</artifactId>
+			<version>2.6.1</version>
 		</dependency>
 
 		<!-- Used for Eureka health check -->
@@ -75,6 +75,11 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>com.h2database</groupId>
+			<artifactId>h2</artifactId>
 			<scope>test</scope>
 		</dependency>
 	</dependencies>

@@ -8,4 +8,6 @@ import org.springframework.data.domain.Pageable;
 public interface CategoryService extends CrudService<Long, Category> {
 	
 	public Page<Category> findByNameContainingIgnoreCase(String name, Pageable pageable);
+	
+	public Category findByNameIgnoreCase(String name);
 }

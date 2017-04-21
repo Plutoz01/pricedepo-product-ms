@@ -14,12 +14,16 @@ import org.plutoz.pricedepo.common.domain.Identifiable;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
+import lombok.ToString;
 
 @Entity
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
+@EqualsAndHashCode( exclude = { "brands", "products" } )
+@ToString( exclude = { "brands", "products" } )
 public class Company implements Identifiable<Long> {
 
 	@Id
