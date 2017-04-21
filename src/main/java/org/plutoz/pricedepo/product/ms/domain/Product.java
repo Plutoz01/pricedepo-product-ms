@@ -18,12 +18,14 @@ import org.plutoz.pricedepo.common.domain.Identifiable;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 
 @Entity
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
+@EqualsAndHashCode
 public class Product implements Identifiable<Long> {
 
 	@Id

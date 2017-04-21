@@ -5,7 +5,8 @@ import org.plutoz.pricedepo.common.domain.Identifiable;
 import lombok.Data;
 
 @Data
-public class CategoryDTO implements Identifiable<Long> {
+public class CompanyDto implements Identifiable<Long> {
+	
 	private Long id;
 	private String name;
 }

@@ -9,7 +9,7 @@ import org.plutoz.pricedepo.common.domain.Identifiable;
 import lombok.Data;
 
 @Data
-public class ProductDTO implements Identifiable<Long> {
+public class ProductDto implements Identifiable<Long> {
 	private Long id;
 	private Long brandId;
 	private Long manufacturerId;
